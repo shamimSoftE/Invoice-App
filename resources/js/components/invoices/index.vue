@@ -29,10 +29,10 @@
     // create invoice
     const newInvoice = async() => {
         let form = await axios.get("/api/create_invoice")
-        console.log('form', form.data)
+        // console.log('form', form.data)
         router.push('/invoice/new')
-        // invoices.value = response.data.invoices
     }
+
 
 </script>
 
@@ -48,6 +48,12 @@
                     <a class="btn btn-secondary" @click="newInvoice">
                         New Invoice
                     </a>
+                    <!-- <a class="btn btn-secondary" style="margin-left: 15px;" @click="customerCrud">
+
+                    </a> -->
+                    <router-link to="/customer" class="btn btn-secondary" style="margin-left: 15px; textDecoration: none;">
+                            Customer Crud
+                    </router-link>
                 </div>
             </div>
 
